@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SILENCE - Контакты</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/contacts.css">
+</head>
+<body>
+
+  <div class="container-main">
+    <nav class="navbar-glass">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <a href="index.html" class="nav-link">Главная</a>
+          <a href="services.html" class="nav-link">Услуги</a>
+          <a href="#" class="nav-link">Абонементы</a>
+          <a href="contacts.html" class="nav-link active">Контакты</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-main">
+    <h1 class="title-main">Контакты</h1>
+  </div>
+
+  <!-- Основной контент -->
+  <main class="container-main my-4">
+    
+    <div class="row g-4 mb-5">
+      <div class="col-lg-6">
+        <div class="card-glass p-4 h-100">
+          <h3 class="title-section">Контактная информация</h3>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Адрес:</span>
+              Санкт-Петербург, ул. Некрасова, д. 24
+            </li>
+            <li>
+              <span class="contact-label">Телефон:</span>
+              +7 (921) 255-15-51
+            </li>
+            <li>
+              <span class="contact-label">Email:</span>
+              SilensePool@gmail.com
+            </li>
+            <li>
+              <span class="contact-label">График работы:</span>
+              09:00 - 19:00
+            </li>
+            <li>
+              <span class="contact-label">Район:</span>
+              Центральный район
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Карта -->
+      <div class="col-lg-6">
+        <div class="card-glass p-4 h-100">
+          <h3 class="title-section">Мы на карте</h3>
+          <div class="map-container">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Форма обратной связи -->
+    <div class="row">
+      <div class="col-12">
+        <div class="form-glass p-4 p-md-5">
+          <h3 class="title-section">Обратная связь</h3>
+          <form id="contactForm">
+            <div class="row g-4">
+              <!-- Левая колонка - поля ввода -->
+              <div class="col-md-8">
+                <div class="row g-4">
+                  <div class="col-12">
+                    <label class="form-label">Имя</label>
+                    <input type="text" class="form-control form-control-glass rounded-3" placeholder="Ваше имя" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Телефон</label>
+                    <input type="tel" class="form-control form-control-glass rounded-3" placeholder="+7 (___) ___-__-__" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-glass rounded-3" placeholder="email@example.com" required>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Правая колонка - сообщение и кнопка -->
+              <div class="col-md-4">
+                <div class="d-flex flex-column h-100">
+                  <div class="mb-4 flex-grow-1">
+                    <label class="form-label">Сообщение</label>
+                    <textarea class="form-control form-control-glass rounded-3" placeholder="Ваше сообщение" style="height: 180px; resize: none;"></textarea>
+                  </div>
+                  <div class="mt-auto">
+                    <button type="submit" class="btn btn-send">Отправить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-glass mt-5">
+    <div class="container-main py-4">
+      <div class="row g-4">
+        <!-- Навигация слева -->
+        <div class="col-md-4">
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Главная</a>
+            <a href=".services.html" class="footer-link">Услуги</a>
+            <a href="#" class="footer-link">Абонементы</a>
+            <a href="contacts.html" class="footer-link">Контакты</a>
+            <a href="#" class="footer-link mt-3" style="font-size: 12px; opacity: 0.7;">Политика конфиденциальности</a>
+          </div>
+        </div>
+        
+        <!-- Контакты справа -->
+        <div class="col-md-4 offset-md-4">
+          <div class="footer-contact">
+            <i class="bi bi-telephone"></i>
+            <span>+7 (921) 255-15-51</span>
+          </div>
+          <div class="footer-contact">
+            <i class="bi bi-envelope"></i>
+            <span>SilensePool@gmail.com</span>
+          </div>
+          <div class="footer-contact">
+            <i class="bi bi-telegram"></i>
+            <span>@SilensePool</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Все права защищены -->
+      <div class="footer-bottom">
+        © 2025 SILENCE. Все права защищены
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast уведомление -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast toast-glass" role="alert">
+      <div class="toast-header">
+        <strong class="me-auto">SILENCE</strong>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+      </div>
+      <div class="toast-body">
+        Ваше обращение успешно отправлено!
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- API Яндекс Карт -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU" type="text/javascript"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contactForm');
+      const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+   
+      ymaps.ready(init);
+      
+      function init() {
+        // Карта 
+        const map = new ymaps.Map('map', {
+          center: [59.938991, 30.356652],
+          zoom: 15,
+          controls: ['zoomControl', 'fullscreenControl']
+        });
+        
+        // метка
+        const placemark = new ymaps.Placemark([59.938991, 30.356652], {
+          balloonContent: 'SILENCE Pool<br>Улица Некрасова, д. 24<br>Санкт-Петербург'
+        }, {
+          preset: 'islands#blueSportIcon'
+        });
+      
+        map.geoObjects.add(placemark);
+        
+        // балун при клике на метку
+        placemark.balloon.open();
+        
+        //  масштабирование колесиком мыши
+        map.behaviors.enable('scrollZoom');
+      }
+      
+      // Обработка формы
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        successToast.show();
+        contactForm.reset();
+      });
+      
+      // Маска для телефона 
+      const phoneInput = contactForm.querySelector('input[type="tel"]');
+      
+      phoneInput.addEventListener('keydown', function(e) {
+        // Backspace, Delete, Tab, Escape, Enter
+        if ([46, 8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
+            // Ctrl+A
+            (e.keyCode === 65 && (e.ctrlKey || e.metaKey)) ||
+            // Ctrl+C
+            (e.keyCode === 67 && (e.ctrlKey || e.metaKey)) ||
+            // Ctrl+V
+            (e.keyCode === 86 && (e.ctrlKey || e.metaKey)) ||
+            // Ctrl+X
+            (e.keyCode === 88 && (e.ctrlKey || e.metaKey)) ||
+            // стрелки
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+          return;
+        }
+        
+        // Запрещаем всё, кроме цифр
+        if ((e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 96 || e.keyCode > 105)) {
+          e.preventDefault();
+        }
+      });
+      
+      phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        // Форматируем номер
+        if (value.length > 0) {
+          let formatted = '+7 ';
+          
+          if (value.length > 1) {
+            formatted += '(' + value.substring(1, 4);
+          }
+          if (value.length >= 4) {
+            formatted += ') ' + value.substring(4, 7);
+          }
+          if (value.length >= 7) {
+            formatted += '-' + value.substring(7, 9);
+          }
+          if (value.length >= 9) {
+            formatted += '-' + value.substring(9, 11);
+          }
+          
+          e.target.value = formatted;
+        } else {
+          e.target.value = '';
+        }
+      });
+      
+      // Очистка поля при фокусе, если там только маска
+      phoneInput.addEventListener('focus', function(e) {
+        if (e.target.value === '+7 (') {
+          e.target.value = '';
+        }
+      });
+   
+    });
+  </script>
+</body>
+</html>

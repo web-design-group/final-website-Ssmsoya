@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SILENCE</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="#">Абонементы</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+</header>
+
+<div class="container" >
+  <h1 class="title">S I L E N C E</h1>
+
+  <div class="main-image">
+    <img src="statics/landing.png" alt="Главное изображение">
+  </div>
+
+  <section class="about">
+    <h2>О нас</h2>
+    <div class="about_content">
+        <div class="about-text">
+        
+        <p><strong>В SILENCE</strong> мы переосмыслили понятие релаксации, объединив целительную силу воды с передовыми иммерсивными технологиями.<br><br>
+        Наша миссия – предоставить уникальную возможность погружения в мир безграничной тишины и визуального наслаждения, где каждая сессия становится неповторимым путешествием. Мы создали пространство, где вы можете отвлечься от повседневной суеты, восстановить гармонию души и тела и открыть новые горизонты восприятия.</p>
+        </div>
+        <div class="about-image">
+        <img src="statics/about.png" alt="О нас image">
+        </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>Популярные услуги</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <img src="statics/services/service_1.png" alt="Туманная заводь">
+        <p>Туманная заводь</p>
+      </div>
+      <div class="service-item">
+        <img src="statics/services/service_2.png" alt="Звёздное небо">
+        <p>Звездное небо</p>
+      </div>
+      <div class="service-item">
+        <img src="statics/services/service_3.png" alt="Дождливое утро">
+        <p>Дождливое утро</p>
+      </div>
+    </div>
+    <button class="btn-more" type="button">Подробнее</button>
+  </section>
+
+  <section class="reviews">
+    <h2>Отзывы</h2>
+    <div class="review-list">
+      <article class="review-card review_back" style="opacity: 0.5;">
+        <h3 class="visually-hidden">Отзыв от Анны</h3>
+        <div class="review-header">
+          <div class="review-avatar">
+            <img src="statics/test.png" alt="Анна">
+          </div>
+          <div class="review-info">
+            <div class="review-name">Анна</div>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p class="review-text">Полное погружение в другой мир! фантастические визуальные и звуковые эффекты, ощущение нереальности. Обязательно к посещению.</p>
+      </article>
+
+      <article class="review-card" style="background: #e6e9f0cc; color: #111; box-shadow: 0 0 15px 2px #3e57a3;">
+        <h3 class="visually-hidden">Отзыв от Евгения</h3>
+        <div class="review-header">
+          <div class="review-avatar">
+            <img src="statics/test.png" alt="Евгений">
+          </div>
+          <div class="review-info">
+            <div class="review-name">Евгений</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Потрясающий опыт! Расслабляет и одновременно удивляет. Лучший бассейн, в котором я когда-либо был!</p>
+      </article>
+
+      <article class="review-card review_back" style="opacity: 0.7;">
+        <h3 class="visually-hidden">Отзыв от Анастасии</h3>
+        <div class="review-header">
+          <div class="review-avatar">
+            <img src="statics/test.png" alt="Анастасия">
+          </div>
+          <div class="review-info">
+            <div class="review-name">Анастасия</div>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p class="review-text">Интересная концепция, необычно и весело. Возможно, хотелось бы большего разнообразия в программах.</p>
+      </article>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <nav class="footer-links">
+    <a class="link" href=".index.html">Главная</a>
+    <a class="link" href="services.html">Услуги</a>
+    <a class="link" href="#">Абонементы</a>
+    <a class="link" href="contacts.html">Контакты</a>
+    <a href="#" style="margin-top: 12px; font-size: 12px; opacity: 0.7;">Политика конфиденциальности</a>
+  </nav>
+
+  <div class="footer-contacts">
+    <div>
+        <img src="statics/contacts/phone.png" alt="Иконка телефона">>
+        +7(921)255-15-51
+    </div>
+    <div>
+        <img src="statics/contacts/email.png" alt="Иконка почты">
+        SilensePool@gmail.com
+    </div>
+    <div>
+        <img src="statics/contacts/phone.png" alt="Иконка тг">
+        @SilensePool
+    </div>
+  </div>
+
+  <div class="footer-note">Все права защищены</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const reviewList = document.querySelector('.review-list');
+  const reviewCards = document.querySelectorAll('.review-card');
+  
+  if (reviewCards.length < 3) return;
+  
+  // Сохраняем оригинальные стили карточек
+  const originalCards = Array.from(reviewCards).map(card => ({
+    html: card.outerHTML,
+    styles: card.getAttribute('style')
+  }));
+  
+  // Создаем структуру слайдера
+  const sliderHTML = `
+    <div class="slider-container">
+      <button class="slider-btn slider-prev">❮</button>
+      
+      <div class="slider-viewport">
+        <div class="slider-track">
+          ${originalCards.map(card => card.html).join('')}
+        </div>
+      </div>
+      
+      <button class="slider-btn slider-next">❯</button>
+    </div>
+  `;
+  
+  // Заменяем старый список на слайдер
+  reviewList.parentNode.innerHTML = sliderHTML;
+  
+  // Инициализируем элементы
+  const sliderTrack = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slider-track .review-card');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  
+  let currentIndex = 1;
+  const totalSlides = slides.length;
+  
+  // Восстанавливаем оригинальные стили
+  slides.forEach((slide, index) => {
+    if (originalCards[index].styles) {
+      slide.setAttribute('style', originalCards[index].styles);
+    }
+  });
+  
+  // Рассчитываем позиции с очень маленьким расстоянием
+  function updateSlider() {
+    const viewportWidth = document.querySelector('.slider-viewport').offsetWidth;
+    const cardWidth = 290;
+    const gap = 20; // Еще меньше расстояние - 20 пикселей
+    
+    // Центральная позиция
+    const centerX = viewportWidth / 2;
+    
+    slides.forEach((slide, index) => {
+      // Очищаем только позиционирование
+      slide.style.position = 'absolute';
+      slide.style.top = '50%';
+      slide.style.transformOrigin = 'center center';
+      slide.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+      slide.style.zIndex = '10';
+      slide.style.width = cardWidth + 'px';
+      slide.style.height = '370px';
+      slide.style.left = '0';
+      
+      // Определяем позицию относительно активной
+      let position = index - currentIndex;
+      
+      // Зацикливание
+      if (position < -1) position += totalSlides;
+      if (position > 1) position -= totalSlides;
+      
+      // Вычисляем позицию X
+      let xPos = centerX;
+      let scale = 0.85;
+      let opacity = 0.6;
+      let zIndex = 20;
+      
+      if (position === 0) {
+        // Центральная карточка
+        xPos = centerX;
+        scale = 1;
+        opacity = 1;
+        zIndex = 30;
+        slide.style.background = '#e6e9f0cc';
+        slide.style.color = '#111';
+        slide.style.boxShadow = '0 0 20px 5px rgba(62, 87, 163, 0.4)';
+      } else if (position === -1) {
+        // Левая карточка
+        xPos = centerX - cardWidth - gap;
+        slide.style.background = 'rgba(255, 255, 255, 0.12)';
+        slide.style.color = '#e2e8ffdd';
+        slide.style.boxShadow = 'inset 0 3px 7px 0 rgba(255, 255, 255, 0.2)';
+      } else if (position === 1) {
+        // Правая карточка
+        xPos = centerX + cardWidth + gap;
+        slide.style.background = 'rgba(255, 255, 255, 0.12)';
+        slide.style.color = '#e2e8ffdd';
+        slide.style.boxShadow = 'inset 0 3px 7px 0 rgba(255, 255, 255, 0.2)';
+      } else {
+        // Остальные карточки скрыты
+        opacity = 0;
+        scale = 0.8;
+        zIndex = 10;
+      }
+      
+      // Применяем стили
+      slide.style.left = xPos + 'px';
+      slide.style.transform = `translate(-50%, -50%) scale(${scale})`;
+      slide.style.opacity = opacity;
+      slide.style.zIndex = zIndex;
+    });
+  }
+  
+  // Следующий слайд
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  }
+  
+  // Предыдущий слайд
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+  
+  // Обработчики кнопок
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+  
+  // Инициализация после загрузки DOM
+  setTimeout(() => {
+    updateSlider();
+    
+    // Реинициализация при изменении размера окна
+    window.addEventListener('resize', updateSlider);
+  }, 100);
+  
+  // Автопрокрутка
+  let autoplay = setInterval(nextSlide, 4000);
+  
+  // Пауза при наведении
+  const sliderContainer = document.querySelector('.slider-container');
+  sliderContainer.addEventListener('mouseenter', () => {
+    clearInterval(autoplay);
+  });
+  
+  sliderContainer.addEventListener('mouseleave', () => {
+    autoplay = setInterval(nextSlide, 4000);
+  });
+});
+</script>
+</body>
+</html>

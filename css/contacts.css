@@ -1,0 +1,232 @@
+:root {
+  --glass-bg: rgba(217, 217, 217, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --primary-color: #e6f2ffcc;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: url("../statics/background1.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #ddd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-main {
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container-main {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-main {
+    width: 95%;
+  }
+}
+
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 10px 0;
+  margin: 25px auto;
+}
+
+.navbar-glass .nav-link {
+  color: #e2ebffdd;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center; 
+}
+
+.navbar-glass .nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar-glass .nav-link:active {
+  color: #0a1a3a;
+  text-decoration: none;
+}
+
+.title-main {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 25px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.title-section {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  color: #e8f0ff;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card-glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 300px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.form-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+}
+
+.form-control-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e8f0ff;
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 12px 15px;
+}
+
+.form-control-glass::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control-glass:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+  color: #e8f0ff;
+}
+
+.form-label {
+  color: #c6d6ff;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.btn-send {
+  background: rgba(20, 38, 70, 0.8);
+  border-radius: 30px;
+  color: #c6d6ffdd;
+  border: none;
+  box-shadow: 0 0 10px 2px rgba(42, 76, 166, 0.7);
+  transition: all 0.3s ease;
+  padding: 12px 40px;
+  width: 100%;
+  font-weight: 500;
+}
+
+.btn-send:hover {
+  background: rgba(40, 67, 120, 0.95);
+  transform: translateY(-2px);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: #c6d6ff;
+  min-width: 140px;
+  display: inline-block;
+}
+
+.footer-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px 20px 0 0;
+  margin-top: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link {
+  color: #c7d9ffcc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toast-glass {
+  background: rgba(30, 60, 114, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e8f0ff;
+}
